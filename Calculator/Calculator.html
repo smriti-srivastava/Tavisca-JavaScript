@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="main.js"></script>
+    <title>CALCULATOR</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Calculator</h1>
+    </header>
+
+    <section class="calculator-section" title="Calculator">
+        <div class="input-box">
+            <input type="text" id="expression" placeholder="Enter Your Expression Here" onkeypress="keyStuff(event);" />
+        </div>
+        <div class="output-box">
+            <label id="result">Result Will Be Shown Here!</label>
+        </div>
+        <div class="parent-flex">
+            <button onclick="addInExpression(this)" value="7">7</button>
+            <button onclick="addInExpression(this)" value="8">8</button>
+            <button onclick="addInExpression(this)" value="9">9</button>
+            <button onclick="addInExpression(this)" value="+">+</button>
+        </div>
+        <div class="parent-flex">
+            <button onclick="addInExpression(this)" value="4">4</button>
+            <button onclick="addInExpression(this)" value="5">5</button>
+            <button onclick="addInExpression(this)" value="6">6</button>
+            <button onclick="addInExpression(this)" value="-">-</button>
+        </div>
+        <div class="parent-flex">
+            <button onclick="addInExpression(this)" value="1">1</button>
+            <button onclick="addInExpression(this)" value="2">2</button>
+            <button onclick="addInExpression(this)" value="3">3</button>
+            <button onclick="addInExpression(this)" value="*">*</button>
+        </div>
+        <div class="parent-flex">
+            <button onclick="addInExpression(this)" value="0">0</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearInput()">C</button>
+            <button onclick="addInExpression(this)" value="/">/</button>
+        </div>
+    </section>
+
+</body>
+
+</html>
