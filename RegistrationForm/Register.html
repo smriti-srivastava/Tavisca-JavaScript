@@ -15,7 +15,7 @@
 		<form onsubmit="return validate()" action="success.html">
 			<h1>User Registration</h1> 
 			<div>
-				<label>First Name</label>
+				<label>First Name*</label>
 				<div>
 					<input class="required" name="firstName" id="firstName" type="text" placeholder="Enter your First Name here">
 					<span id="firstNameError" class="error"></span>
@@ -29,14 +29,14 @@
 				</div>
 			</div> 	
 			<div>
-				<label>Phone Number</label>
+				<label>Phone Number*</label>
 				<div>
 					<input class="required" name="phoneNumber" id="phoneNumber" type="text" placeholder="Enter your Phone Number here">
 					<span id="phoneNumberError" class="error"></span>
 				</div>
 			</div>
 			<div>
-				<label>Email</label>
+				<label>Email*</label>
 				<div>
 					<input class="required" name="email" id="email" type="text" placeholder="Enter your Email ID here">
 					<span id="emailError" class="error"></span>
@@ -47,7 +47,7 @@
 				<textarea name="address" id="address" placeholder="Enter your Address here"></textarea>
 			</div>
 			<div>
-				<label>City</label>
+				<label>City*</label>
 				<div>
 					<select name="city" id="city">
 						<option value="None" selected>None</option>
@@ -62,7 +62,7 @@
 				<div>
 			</div>
 			<div>
-				<label>Gender</label>
+				<label>Gender*</label>
 				<div>
 					<input type="radio" name="gender" value="male"> Male
 					<input type="radio" name="gender" value="female"> Female
