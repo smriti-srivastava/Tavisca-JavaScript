@@ -67,13 +67,13 @@ function validate() {
         display_error("phoneNumberError", "Phone number cannot be empty");
         validationFlag = false;
     }
-    else if(phoneNumber.length != 10) {
-        display_error("phoneNumberError", "Phone number should be 10 digits long");
-        validationFlag = false;
-    }
     else if(!check_digits_only(phoneNumber))
     {
         display_error("phoneNumberError", "Phone number should only have digits [0-9]");
+        validationFlag = false;
+    }
+    else if(phoneNumber.length != 10) {
+        display_error("phoneNumberError", "Phone number should be 10 digits long");
         validationFlag = false;
     }
     if(check_empty(email)) {
