@@ -1,7 +1,6 @@
 function check_alphabets_only(input) {
     var alphabetsOnly = /^[a-zA-Z]*$/;
     return alphabetsOnly.test(input);
-
 }
 
 function check_digits_only(input) {
@@ -10,7 +9,7 @@ function check_digits_only(input) {
 }
 
 function check_email_format(input) {
-    var emailPattern = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return emailPattern.test(input);
 }
 
@@ -38,11 +37,9 @@ function empty_all_errorBox() {
     errorBox.innerHTML = "";
     errorBox = document.getElementById("cityError");
     errorBox.innerHTML = "";
-
 }
 
 function validate() {
-
     validationFlag = true;
     firstName = document.getElementById("firstName").value;
     lastName = document.getElementById("lastName").value;
@@ -51,9 +48,7 @@ function validate() {
     address = document.getElementById("address").value;
     city = document.getElementById("city").value;
     gender = document.getElementsByName("gender");
-    
     empty_all_errorBox();
-
     if(check_empty(firstName))
     {
         display_error("firstNameError", "First Name cannot be empty");
@@ -67,29 +62,24 @@ function validate() {
         display_error("lastNameError", "Last Name should only have English Alphabets");
         validationFlag = false;
     }
-    
     if(check_empty(phoneNumber))
     {
         display_error("phoneNumberError", "Phone number cannot be empty");
         validationFlag = false;
     }
-    
     else if(phoneNumber.length != 10) {
         display_error("phoneNumberError", "Phone number should be 10 digits long");
         validationFlag = false;
     }
-
     else if(!check_digits_only(phoneNumber))
     {
         display_error("phoneNumberError", "Phone number should only have digits [0-9]");
         validationFlag = false;
     }
-    
     if(check_empty(email)) {
         display_error("emailError", "Email cannot be empty");
         validationFlag = false;
     }
-
     else if(!check_email_format(email)) {
         display_error("emailError", "Inavlid Email address");
         validationFlag = false;
@@ -99,16 +89,13 @@ function validate() {
         if(gender[index].checked)
             genderSelected = true;
     } 
-
     if(!genderSelected) {
         display_error("genderError", "Select your gender");
         validationFlag = false;
     }
-
     if(city == "None") {
         display_error("cityError", "Select Your City");
         validationFlag = false;
     }
-
     return validationFlag;
 }
