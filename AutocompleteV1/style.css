@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem; 
+}
+
+.auto-complete {
+    height: 50vh;
+    position: relative;
+    width: 50%;
+}
+
+.text-box {
+    height: 3rem;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.suggestions {
+    position: absolute;
+    top: 3rem;
+    list-style-type: none;
+    width: 100%;
+    border: 1px solid #dddddd; 
+}
+
+.scroll {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.suggestions li {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #999999;
+    color: white;
+}
