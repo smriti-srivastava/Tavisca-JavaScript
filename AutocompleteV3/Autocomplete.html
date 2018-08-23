@@ -1,0 +1,22 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Autocomplete</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="myscript.js"></script>
+</head>
+
+<body onclick="removeSuggessionBox()">
+    <div class="auto-complete">
+        <input id="textBox" onkeyup="onkeyUpFunctionSelector()" onfocus="showSuggestions(event)" type="text" class="text-box">
+        <button onclick="clearTextBox()" class="clear-textbox-btn"><span><img src="cross.png"></span></button>
+        <ul id="suggestionBox" class="suggestions">
+        </ul>
+    </div>
+</body>
+
+</html>
