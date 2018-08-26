@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>REGISTER</title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script type = "text/javascript"  src="myscript.js"></script>
+</head>
+
+<body>
+	
+	<section class="registration-form-section" title="User Registration">
+		<form onsubmit="return validate()" action="success.html">
+			<h1>User Registration</h1> 
+			<div>
+				<label>First Name*</label>
+				<div>
+					<input class="required" name="firstName" id="firstName" type="text" placeholder="Enter your First Name here">
+					<span id="firstNameError" class="error"></span>
+				</div>
+			</div>
+			<div>
+				<label>Last Name</label>
+				<div>
+					<input name="lastName" id="lastName" type="text" placeholder="Enter your Last Name here">
+					<span id="lastNameError" class="error"></span>
+				</div>
+			</div> 	
+			<div>
+				<label>Phone Number*</label>
+				<div>
+					<input class="required" name="phoneNumber" id="phoneNumber" type="text" placeholder="Enter your Phone Number here">
+					<span id="phoneNumberError" class="error"></span>
+				</div>
+			</div>
+			<div>
+				<label>Email*</label>
+				<div>
+					<input class="required" name="email" id="email" type="text" placeholder="Enter your Email ID here">
+					<span id="emailError" class="error"></span>
+				</div>
+			</div>
+			<div>
+				<label>Address</label>
+				<textarea name="address" id="address" placeholder="Enter your Address here"></textarea>
+			</div>
+			<div>
+				<label>City*</label>
+				<div>
+					<select name="city" id="city">
+						<option value="None" selected>None</option>
+						<option value="Mumbai">Mumbai</option>
+						<option value="Pune">Pune</option>
+						<option value="Banglore">Banglore</option>
+						<option value="Hyderabad">Hyderabad</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Other">Other</option>
+					</select>
+					<span id="cityError" class="error"></span>
+				<div>
+			</div>
+			<div>
+				<label>Gender*</label>
+				<div>
+					<input type="radio" name="gender" value="male"> Male
+					<input type="radio" name="gender" value="female"> Female
+					<input type="radio" name="gender" value="trans"> Trans
+					<span id="genderError" class="error"></span>
+				</div>
+			</div>
+			<input type="submit" value="Register">
+		</form>
+	</section>
+
+</body>
+
+</html>
